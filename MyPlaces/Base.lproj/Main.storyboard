@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -144,6 +145,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="3TL-S8-fNY">
+                                        <rect key="frame" x="0.0" y="503" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3TL-S8-fNY" id="ka6-GY-Pw3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oug-B3-PyK" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oug-B3-PyK" firstAttribute="centerY" secondItem="ka6-GY-Pw3" secondAttribute="centerY" id="4FR-pA-ajc"/>
+                                                <constraint firstItem="oug-B3-PyK" firstAttribute="centerX" secondItem="ka6-GY-Pw3" secondAttribute="centerX" id="TGl-JU-00c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -169,13 +187,14 @@
                         <outlet property="placeLocation" destination="uwO-bs-gdX" id="Naz-fH-hYG"/>
                         <outlet property="placeName" destination="166-3d-ASU" id="jae-rU-YI6"/>
                         <outlet property="placeType" destination="c9E-Cw-Eua" id="mZf-og-Oa7"/>
+                        <outlet property="ratingControl" destination="oug-B3-PyK" id="Mz8-z5-99C"/>
                         <outlet property="saveButton" destination="SQj-Sa-iOe" id="IdS-xY-OFe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUW-FN-tqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mfV-nG-Zxe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="75"/>
+            <point key="canvasLocation" x="1392.753623188406" y="75"/>
         </scene>
         <!--My Places-->
         <scene sceneID="CD3-kg-qn0">
@@ -203,16 +222,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaB-JA-opg">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="212" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIb-5o-gfH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="24.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="212" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEq-fX-Ace">
-                                                            <rect key="frame" x="0.0" y="27.5" width="302" height="20"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="212" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="e1h-PL-JAB"/>
                                                             </constraints>
@@ -221,7 +240,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB2-6b-HPD">
-                                                            <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                            <rect key="frame" x="0.0" y="50.5" width="212" height="18.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18.5" id="B1i-jd-cC1"/>
                                                             </constraints>
@@ -231,18 +250,35 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="3Pm-xS-6Cn" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="316" y="35.5" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="eJK-hd-M68"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YaB-JA-opg" firstAttribute="leading" secondItem="ejW-33-8aV" secondAttribute="trailing" constant="16" id="0uM-9q-28q"/>
+                                                <constraint firstItem="3Pm-xS-6Cn" firstAttribute="centerY" secondItem="37u-e7-AMY" secondAttribute="centerY" id="ABe-DI-gwA"/>
+                                                <constraint firstItem="3Pm-xS-6Cn" firstAttribute="leading" secondItem="YaB-JA-opg" secondAttribute="trailing" constant="8" id="TVk-xy-IIt"/>
                                                 <constraint firstItem="ejW-33-8aV" firstAttribute="centerY" secondItem="YaB-JA-opg" secondAttribute="centerY" id="Veu-oO-6gv"/>
                                                 <constraint firstItem="ejW-33-8aV" firstAttribute="top" secondItem="37u-e7-AMY" secondAttribute="topMargin" constant="-1" id="aCI-Vy-YSX"/>
                                                 <constraint firstItem="ejW-33-8aV" firstAttribute="leading" secondItem="37u-e7-AMY" secondAttribute="leadingMargin" constant="-5" id="e7A-qG-ouS"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="YaB-JA-opg" secondAttribute="trailing" constant="-4" id="lhQ-Ds-bhS"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Pm-xS-6Cn" secondAttribute="trailing" constant="8" id="iSL-EX-XNY"/>
                                                 <constraint firstItem="ejW-33-8aV" firstAttribute="centerY" secondItem="37u-e7-AMY" secondAttribute="centerY" id="lxa-mJ-xIm"/>
                                                 <constraint firstItem="YaB-JA-opg" firstAttribute="top" secondItem="37u-e7-AMY" secondAttribute="topMargin" constant="-3" id="oma-Md-6hk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="3Pm-xS-6Cn" id="UEF-Gp-Y1q"/>
                                             <outlet property="imageOfPlace" destination="ejW-33-8aV" id="xTR-yq-DTw"/>
                                             <outlet property="locationLable" destination="eEq-fX-Ace" id="EaD-NK-afC"/>
                                             <outlet property="nameLable" destination="HIb-5o-gfH" id="d1d-zv-ahI"/>
@@ -348,5 +384,7 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
     </resources>
 </document>

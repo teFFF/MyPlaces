@@ -15,6 +15,7 @@
 		4C083E71248565B50086B807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C083E6F248565B50086B807 /* LaunchScreen.storyboard */; };
 		4C083E79248569E10086B807 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C083E78248569E10086B807 /* MainViewController.swift */; };
 		4CCDA5452486BF92007921C8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDA5442486BF92007921C8 /* StorageManager.swift */; };
+		4CCDA5472487D906007921C8 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDA5462487D906007921C8 /* RatingControl.swift */; };
 		4CDD8E982486926D008B8072 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8E972486926D008B8072 /* CustomTableViewCell.swift */; };
 		4CDD8E9A2486999E008B8072 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8E992486999E008B8072 /* PlaceModel.swift */; };
 		4CDD8E9C2486A712008B8072 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD8E9B2486A712008B8072 /* NewPlaceViewController.swift */; };
@@ -32,6 +33,7 @@
 		4C083E72248565B50086B807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C083E78248569E10086B807 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4CCDA5442486BF92007921C8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4CCDA5462487D906007921C8 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		4CDD8E972486926D008B8072 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4CDD8E992486999E008B8072 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		4CDD8E9B2486A712008B8072 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
@@ -75,9 +77,10 @@
 				4C083E66248565B10086B807 /* SceneDelegate.swift */,
 				4C083E78248569E10086B807 /* MainViewController.swift */,
 				4CCDA5442486BF92007921C8 /* StorageManager.swift */,
-				4CDD8E972486926D008B8072 /* CustomTableViewCell.swift */,
 				4CDD8E992486999E008B8072 /* PlaceModel.swift */,
 				4CDD8E9B2486A712008B8072 /* NewPlaceViewController.swift */,
+				4CDD8E972486926D008B8072 /* CustomTableViewCell.swift */,
+				4CCDA5462487D906007921C8 /* RatingControl.swift */,
 				4C083E6A248565B10086B807 /* Main.storyboard */,
 				4C083E6D248565B50086B807 /* Assets.xcassets */,
 				4C083E6F248565B50086B807 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				4CDD8E9C2486A712008B8072 /* NewPlaceViewController.swift in Sources */,
 				4C083E65248565B10086B807 /* AppDelegate.swift in Sources */,
 				4CCDA5452486BF92007921C8 /* StorageManager.swift in Sources */,
+				4CCDA5472487D906007921C8 /* RatingControl.swift in Sources */,
 				4CDD8E9A2486999E008B8072 /* PlaceModel.swift in Sources */,
 				4CDD8E982486926D008B8072 /* CustomTableViewCell.swift in Sources */,
 				4C083E67248565B10086B807 /* SceneDelegate.swift in Sources */,
