@@ -181,24 +181,12 @@
         <scene sceneID="CD3-kg-qn0">
             <objects>
                 <viewController id="hE0-EP-VB0" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aLE-Kw-wUc">
+                    <view key="view" contentMode="scaleAspectFill" id="aLE-Kw-wUc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fgt-vQ-iYv">
-                                <rect key="frame" x="0.0" y="89" width="413" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <segments>
-                                    <segment title="Date"/>
-                                    <segment title="Name"/>
-                                </segments>
-                                <connections>
-                                    <action selector="sortSelection:" destination="hE0-EP-VB0" eventType="valueChanged" id="JZ8-Cm-Ckk"/>
-                                </connections>
-                            </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zuu-Jw-l6G">
-                                <rect key="frame" x="0.0" y="121" width="414" height="775"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zuu-Jw-l6G">
+                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="lZE-nq-iFd" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -211,8 +199,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ejW-33-8aV">
                                                     <rect key="frame" x="15" y="10" width="65" height="65"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="65" id="47y-xF-qX2"/>
-                                                        <constraint firstAttribute="height" constant="65" id="VXv-H2-VEW"/>
+                                                        <constraint firstAttribute="width" constant="65" id="y7D-S1-T8F"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaB-JA-opg">
@@ -226,12 +213,18 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEq-fX-Ace">
                                                             <rect key="frame" x="0.0" y="27.5" width="302" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="e1h-PL-JAB"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB2-6b-HPD">
                                                             <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18.5" id="B1i-jd-cC1"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -240,12 +233,13 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="YaB-JA-opg" secondAttribute="bottom" constant="8" id="23a-15-y0Y"/>
-                                                <constraint firstItem="YaB-JA-opg" firstAttribute="leading" secondItem="ejW-33-8aV" secondAttribute="trailing" constant="16" id="7SI-pD-Fib"/>
-                                                <constraint firstItem="ejW-33-8aV" firstAttribute="leading" secondItem="37u-e7-AMY" secondAttribute="leading" constant="15" id="Mgy-NZ-miO"/>
-                                                <constraint firstItem="ejW-33-8aV" firstAttribute="centerY" secondItem="37u-e7-AMY" secondAttribute="centerY" id="Vnb-Ov-mAd"/>
-                                                <constraint firstItem="YaB-JA-opg" firstAttribute="top" secondItem="37u-e7-AMY" secondAttribute="top" constant="8" id="ezu-An-wDk"/>
-                                                <constraint firstAttribute="trailing" secondItem="YaB-JA-opg" secondAttribute="trailing" constant="16" id="ts7-y4-qg8"/>
+                                                <constraint firstItem="YaB-JA-opg" firstAttribute="leading" secondItem="ejW-33-8aV" secondAttribute="trailing" constant="16" id="0uM-9q-28q"/>
+                                                <constraint firstItem="ejW-33-8aV" firstAttribute="centerY" secondItem="YaB-JA-opg" secondAttribute="centerY" id="Veu-oO-6gv"/>
+                                                <constraint firstItem="ejW-33-8aV" firstAttribute="top" secondItem="37u-e7-AMY" secondAttribute="topMargin" constant="-1" id="aCI-Vy-YSX"/>
+                                                <constraint firstItem="ejW-33-8aV" firstAttribute="leading" secondItem="37u-e7-AMY" secondAttribute="leadingMargin" constant="-5" id="e7A-qG-ouS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YaB-JA-opg" secondAttribute="trailing" constant="-4" id="lhQ-Ds-bhS"/>
+                                                <constraint firstItem="ejW-33-8aV" firstAttribute="centerY" secondItem="37u-e7-AMY" secondAttribute="centerY" id="lxa-mJ-xIm"/>
+                                                <constraint firstItem="YaB-JA-opg" firstAttribute="top" secondItem="37u-e7-AMY" secondAttribute="topMargin" constant="-3" id="oma-Md-6hk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -262,8 +256,27 @@
                                     <outlet property="delegate" destination="hE0-EP-VB0" id="mOE-7e-maZ"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-vQ-iYv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="hE0-EP-VB0" eventType="valueChanged" id="JZ8-Cm-Ckk"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zuu-Jw-l6G" firstAttribute="leading" secondItem="UtU-lE-fwJ" secondAttribute="leading" id="IWO-Lc-FTd"/>
+                            <constraint firstItem="fgt-vQ-iYv" firstAttribute="trailing" secondItem="UtU-lE-fwJ" secondAttribute="trailing" id="KK5-hZ-Hja"/>
+                            <constraint firstItem="Zuu-Jw-l6G" firstAttribute="trailing" secondItem="UtU-lE-fwJ" secondAttribute="trailing" id="Uwg-Kt-fIZ"/>
+                            <constraint firstItem="Zuu-Jw-l6G" firstAttribute="top" secondItem="fgt-vQ-iYv" secondAttribute="bottom" constant="1" id="ZPl-c2-gXz"/>
+                            <constraint firstAttribute="bottom" secondItem="Zuu-Jw-l6G" secondAttribute="bottom" id="qB2-ka-dhc"/>
+                            <constraint firstItem="fgt-vQ-iYv" firstAttribute="top" secondItem="UtU-lE-fwJ" secondAttribute="top" id="wle-LD-ISg"/>
+                            <constraint firstItem="fgt-vQ-iYv" firstAttribute="leading" secondItem="UtU-lE-fwJ" secondAttribute="leading" id="zvM-cC-JOP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UtU-lE-fwJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="JV7-it-ibz">
