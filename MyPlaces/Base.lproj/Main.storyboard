@@ -231,12 +231,25 @@
                                     <action selector="closeVC:" destination="zXm-Gf-f4e" eventType="touchUpInside" id="6vq-oY-uDa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21U-ma-MPn">
+                                <rect key="frame" x="324" y="772" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GAc-nP-bQV"/>
+                                    <constraint firstAttribute="height" constant="50" id="Udb-ye-H2O"/>
+                                </constraints>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="zXm-Gf-f4e" eventType="touchUpInside" id="3VZ-tV-GhQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Wz4-wi-gQb" firstAttribute="top" secondItem="cDQ-gQ-HVQ" secondAttribute="top" id="1bJ-Qg-jJf"/>
                             <constraint firstAttribute="bottom" secondItem="Wz4-wi-gQb" secondAttribute="bottom" id="AS5-4n-O6h"/>
+                            <constraint firstItem="bW7-cR-6mb" firstAttribute="bottom" secondItem="21U-ma-MPn" secondAttribute="bottom" constant="40" id="B3A-BJ-Se0"/>
                             <constraint firstItem="bW7-cR-6mb" firstAttribute="trailing" secondItem="bvK-FD-3Th" secondAttribute="trailing" constant="40" id="JU6-jc-9fd"/>
+                            <constraint firstItem="bW7-cR-6mb" firstAttribute="trailing" secondItem="21U-ma-MPn" secondAttribute="trailing" constant="40" id="TfE-aq-Qb7"/>
                             <constraint firstItem="Wz4-wi-gQb" firstAttribute="leading" secondItem="bW7-cR-6mb" secondAttribute="leading" id="crp-go-e0U"/>
                             <constraint firstItem="bvK-FD-3Th" firstAttribute="top" secondItem="bW7-cR-6mb" secondAttribute="top" constant="40" id="lYh-tD-Z0M"/>
                             <constraint firstItem="Wz4-wi-gQb" firstAttribute="trailing" secondItem="bW7-cR-6mb" secondAttribute="trailing" id="pGe-lc-i2l"/>
@@ -438,6 +451,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
