@@ -11,7 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController {
     
-    var place: Place!
+    var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     
     @IBOutlet weak var mapView: MKMapView!
@@ -79,8 +79,8 @@ extension MapViewController: MKMapViewDelegate {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             imageView.layer.cornerRadius = 10
             imageView.clipsToBounds = true
-            imageView.image = UIImage(data: imageData)annotationView
-            ?.rightCalloutAccessoryView = imageView
+            imageView.image = UIImage(data: imageData)
+            annotationView?.rightCalloutAccessoryView = imageView
         }
         
         return annotationView
