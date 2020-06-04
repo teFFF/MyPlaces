@@ -30,6 +30,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        overrideUserInterfaceStyle = .light
         places = realm.objects(Place.self)
         
         //Setup the search controller
